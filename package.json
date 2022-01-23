@@ -1,6 +1,6 @@
 {
     "name": "@pratikpc/fabric-contract-client",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Write easy to read and maintain Chaincode Clients using TypeScript and Node.JS",
     "author": "Pratik Chowdhury <pratikc@live.co.uk>",
     "homepage": "https://github.com/pratikpc/fabric-contract-client#readme",
