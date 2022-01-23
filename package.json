@@ -1,0 +1,49 @@
+{
+    "name": "@pratikpc/fabric-contract-client",
+    "version": "0.0.0",
+    "description": "> TODO: description",
+    "author": "Pratik Chowdhury <pratikc@live.co.uk>",
+    "homepage": "https://github.com/pratikpc/fabric-contract-client#readme",
+    "license": "MIT",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "directories": {
+        "lib": "lib",
+        "test": "__tests__"
+    },
+    "files": [
+        "lib"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pratikpc/fabric-contract-client.git"
+    },
+    "scripts": {
+        "clean": "rimraf dist",
+        "module-remove": "rimraf node_modules",
+        "build": "tsc",
+        "lint": "eslint --cache --max-warnings=0 --ignore-path ./.eslintignore .",
+        "lint:fix": "npm run lint -- --fix"
+    },
+    "bugs": {
+        "url": "https://github.com/pratikpc/fabric-contract-client/issues"
+    },
+    "dependencies": {
+        "@pratikpc/removefirstargfromallfunctionofclassandintersectingfromparent": "^1.0.0",
+        "reflect-metadata": "^0.1.13"
+    },
+    "devDependencies": {
+        "@types/node": "^17.0.10",
+        "eslint": "^8.7.0",
+        "eslint-config-airbnb-typescript-prettier": "^5.0.0",
+        "prettier": "^2.5.1",
+        "rimraf": "3.0.2",
+        "fabric-contract-api": "2.4.1-dev-20211229",
+        "fabric-network": "^2.2.11",
+        "typescript": "^4.5.5"
+    },
+    "peerDependencies": {
+        "fabric-contract-api": "2.4.1-dev-20211229",
+        "fabric-network": "^2.2.11"
+    }
+}
