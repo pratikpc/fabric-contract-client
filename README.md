@@ -95,6 +95,32 @@ Ours uses the value of your return argument
 
 Yes this support exists!
 
+## What's the catch?
+
+The catch is that we expect you to write the code with proper and corect annotations
+
+```typescript
+@Info({
+    title: 'CarContract',
+    DeployedChainCodeName: 'DeployedCarContract',
+    description: 'A sample Car Contract'
+})
+export default class CarContract extends Contract {
+    @Transaction(false)
+    @Returns('boolean')
+    // eslint-disable-next-line class-methods-use-this
+    public async carExists(
+        ctx: Context,
+        carId: string
+    ): Promise<boolean> {
+        const data: Uint8Array = await ctx.stub.getState(
+            carId
+        );
+        return !!data && data.length > 0;
+    }
+}
+```
+
 ## Contact me
 
 You can create an issue here or contact me [via LinkedIn](https://www.linkedin.com/in/pratik-chowdhury-889bb2183/)
